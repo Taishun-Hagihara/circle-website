@@ -3,31 +3,31 @@
 
 ├─ public/                ← そのまま dist に“同名”でコピーされる静的ファイル置き場
 
-│   ├─ robots.txt
+│  　　　 ├─ robots.txt
 
-│   ├─ sitemap.xml
+│  　　　 ├─ sitemap.xml
 
-│   └─ 画像・アイコン・OGP・manifest など（URLは /ファイル名 で参照）
+│  　　　 └─ 画像・アイコン・OGP・manifest など（URLは /ファイル名 で参照）
 
 ├─ src/                   ← アプリ本体（あなたが主に編集）
 
-│   ├─ assets/            画像・フォント等（import して使う → ビルド時にハッシュ付きで出力）
+│  　　　 ├─ assets/            画像・フォント等（import して使う → ビルド時にハッシュ付きで出力）
 
-│   ├─ components/        再利用 UI コンポーネント群
+│  　　　 ├─ components/        再利用 UI コンポーネント群
 
-│   ├─ hooks/             カスタムフック
+│  　　　 ├─ hooks/             カスタムフック
 
-│   ├─ pages/             画面（ルーティング単位のコンポーネント）
+│  　　　 ├─ pages/             画面（ルーティング単位のコンポーネント）
 
-│   ├─ styles/            共通CSSやモジュールCSS（必要に応じて）
+│  　　　 ├─ styles/            共通CSSやモジュールCSS（必要に応じて）
 
-│   ├─ App.jsx            ルートコンポーネント
+│  　　　 ├─ App.jsx            ルートコンポーネント
 
-│   ├─ App.css            App 用スタイル
+│  　　　 ├─ App.css            App 用スタイル
 
-│   ├─ index.css          グローバルCSS（リセット/トークンなど）
+│   　　　├─ index.css          グローバルCSS（リセット/トークンなど）
 
-│   └─ main.jsx           エントリ（App を DOM にマウント）
+│   　　　└─ main.jsx           エントリ（App を DOM にマウント）
 
 ├─ index.html             ← Vite の HTML テンプレ（メタ/OGP等を編集するならここ）
 
@@ -41,13 +41,13 @@
 
 ├─ dist/                  ← `vite build` の成果物（自動生成・編集しない）
 
-│   ├─ index.html         ビルド後のHTML
+│  　　　 ├─ index.html         ビルド後のHTML
 
-│   ├─ index-xxxx.js      バンドル済み JS（ハッシュ付き）
+│ 　　　  ├─ index-xxxx.js      バンドル済み JS（ハッシュ付き）
 
-│   ├─ <画像等>-xxxx.*    src 由来の import 資産（ハッシュ付き）
+│  　　　 ├─ <画像等>-xxxx.*    src 由来の import 資産（ハッシュ付き）
 
-│   └─ robots.txt ほか    public 由来のファイル（ファイル名そのまま）
+│  　　　 └─ robots.txt ほか    public 由来のファイル（ファイル名そのまま）
 
 ├─ node_modules/          ← 依存（自動生成・編集しない）
 
