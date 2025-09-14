@@ -1,0 +1,72 @@
+/* ← ファイル先頭に置く（この前に何も置かない） */
+@import url("./tokens.css");
+
+/* ここからは必ずセレクタの中に書く */
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  color: var(--text);
+  background:
+    radial-gradient(1200px 800px at 70% -20%, rgba(106,169,255,.12), transparent 60%),
+    radial-gradient(1600px 1000px at -10% 10%, rgba(82,224,160,.10), transparent 60%),
+    var(--bg);
+}
+
+
+
+/* Typography */
+.h1 { font-size: clamp(28px, 6vw, 48px); line-height: 1.12; font-weight: 700; letter-spacing: .2px; }
+.h2 { font-size: clamp(22px, 4.2vw, 32px); line-height: 1.2; font-weight: 700; }
+.p { font-size: clamp(15px, 2.5vw, 17px); line-height: 1.8; color: var(--muted); }
+
+
+.container { width: var(--container); margin-inline: auto; padding-inline: 8px; }
+.section { padding: var(--space-8) 0; border-top: 1px solid rgba(255,255,255,.04); }
+
+
+/* Button */
+.button {
+display: inline-flex; align-items: center; gap: 10px;
+padding: 12px 18px; border-radius: 999px; border: 1px solid rgba(255,255,255,.14);
+background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+box-shadow: var(--shadow-sm);
+color: var(--text); text-decoration: none; font-weight: 600;
+transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+.button:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); border-color: rgba(255,255,255,.24); }
+.button:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+
+
+/* Card */
+.card {
+background: linear-gradient(180deg, rgba(255,255,255,.02), rgba(0,0,0,.06)), var(--card);
+border: 1px solid var(--card-border);
+border-radius: var(--radius);
+box-shadow: var(--shadow-sm);
+transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+.card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: rgba(255,255,255,.18); }
+
+
+/* Chip */
+.chip { display:inline-block; padding:6px 10px; border-radius:999px; background: rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.14); }
+
+
+/* Accent text/line */
+.accent { color: var(--accent); }
+.hr-accent { height:2px; background: linear-gradient(90deg, transparent, var(--accent), transparent); border:0; }
+
+
+/* QR placeholder */
+.qr-box {
+width: clamp(180px, 50vw, 240px); aspect-ratio: 1/1; display:grid; place-items:center;
+border-radius: calc(var(--radius) - 6px);
+background: repeating-conic-gradient(from 45deg, rgba(255,255,255,.06) 0 15deg, transparent 15deg 30deg);
+border: 2px dashed rgba(255,255,255,.24);
+color: var(--muted);
+}
+
+
+/* Reveal on scroll */
+[data-reveal] { opacity: 0; transform: translateY(18px) scale(.98); filter: blur(1px); transition: opacity .6s ease, transform .6s ease, filter .6s ease; }
+[data-reveal].is-revealed { opacity:1; transform: none; filter: none; }

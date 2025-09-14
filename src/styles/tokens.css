@@ -1,0 +1,45 @@
+:root {
+    /* Font stacks */
+    --font-sans: "Plus Jakarta Sans", "Noto Sans JP", system-ui, -apple-system, "Segoe UI", Roboto, "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+    
+    
+    /* Colors */
+    --bg: #0b0c10; /* 背景（ダーク寄り・ヒーロー向け） */
+    --surface: #111217; /* セクション背景 */
+    --text: #e9ecf1; /* 本文 */
+    --muted: #aab3c0; /* サブテキスト */
+    --card: #151823; /* カード背景 */
+    --card-border: #22283a; /* カード枠 */
+    
+    
+    /* Accent (初期はブルー系。下の data-accent で切替) */
+    --accent: #6aa9ff;
+    
+    
+    /* Spacing scale（8pxベース） */
+    --space-1: 4px;
+    --space-2: 8px;
+    --space-3: 12px;
+    --space-4: 16px;
+    --space-5: 24px;
+    --space-6: 32px;
+    --space-7: 48px;
+    --space-8: 64px;
+    
+    
+    /* Radius & shadow */
+    --radius: 16px;
+    --shadow-sm: 0 1px 2px rgba(0,0,0,.2);
+    --shadow-md: 0 8px 24px rgba(0,0,0,.25);
+    --shadow-lg: 0 18px 48px rgba(0,0,0,.35);
+    
+    
+    /* Content width */
+    --container: min(1120px, 92vw);
+}
+    
+    
+    /* Accent variations (R/G/B) */
+:root[data-accent="red"] { --accent: #ff6a6a; }
+:root[data-accent="green"]{ --accent: #52e0a0; }
+:root[data-accent="blue"] { --accent: #6aa9ff; }
